@@ -1,0 +1,146 @@
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Yaz.aspx.vb" Inherits="Sports.Kasa.Yaz" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style>
+        html {
+            font-family: 'Lucida Sans Unicode';
+            font-size:9px;
+        }
+	.table {
+		border-collapse:collapse!important
+	}
+	.table td {
+        background-color:#fff!important
+	}
+
+    .table th {
+		background-color:#ddd!important
+	}
+	.table-bordered td,.table-bordered th {
+		border:1px solid #bbb!important
+	}
+    .left {
+        text-align: left;ASDDSASDFASDF
+    }
+    .center {
+        text-align:center;
+    }
+    .right {
+        text-align:right;
+    }
+    .baslik {
+        font-size: 16px;
+        font-weight:bold;
+    }
+    </style>
+</head>
+<body onload="window.print();//window.close();">
+     <table class="table" style="width: 100%;">
+        <tr>
+            <td class="baslik">
+                <asp:Literal ID="Literal_Baslik" runat="server"></asp:Literal></td>
+            <td class="baslik right">
+                <asp:Literal ID="Literal_BelgeNo" runat="server"></asp:Literal></td>
+        </tr>
+    </table>
+    <br />
+	<table class="table table-bordered" style="width: 100%;">
+            <tr>
+                <td colspan="6" style="border: none;">Tahsilatlar</td>
+                <th colspan="2" class="right"><b>Gün Başı Nakit Mevcudu</b></th>
+                <th class="right">
+                    <asp:Literal ID="Literal_OncekiDevir" runat="server"></asp:Literal></th>
+            </tr>
+			<tr>
+				<th>Belge Tarihi</th>
+                <th>Belge No</th>
+                <th>Tahsil Noktası</th>
+                <th>Hizmet Adı</th>
+                <th>Kar Merkezi</th>
+                <th>Cari Kod</th>
+                <th>Sipariş No</th>
+                <th>KDV</th>
+                <th>Tutar</th>
+			</tr>
+            <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+            <tr>
+                <td colspan="6"></td>
+                <th colspan="2">Gün Sonu Tahsilatlar Toplamı</th>
+                <th class="right">
+                    <asp:Literal ID="Literal_Tahsilatlar_Toplami" runat="server"></asp:Literal></th>
+            </tr>
+            <tr>
+                <td colspan="9" style="border: none;">Ödemeler</td>
+            </tr>
+			<tr>
+				<th>Belge Tarihi</th>
+                <th>Belge No</th>
+                <th>Firma Adı</th>
+                <th>Gider Kalemi</th>
+                <th>Masraf Yeri</th>
+                <th>Cari Kod</th>
+                <th>Sipariş No</th>
+                <th>KDV</th>
+                <th>Tutar</th>
+			</tr>
+            <asp:Literal ID="Literal2" runat="server"></asp:Literal>
+        <tr>
+            <td colspan="6" rowspan="2" style="font-size: 10px;">
+                <asp:Literal ID="Literal_Not" runat="server"></asp:Literal></td>
+            <th colspan="2" class="right">Gün Sonu Ödemeler Toplamı</th>
+            <th class="right"><b>
+            <asp:Literal ID="Literal_OdemelerToplami" runat="server"></asp:Literal></b></th>
+        </tr>
+        <tr>
+            <th colspan="2" class="right">Devreden Kasa Mevcudu</th>
+            <th class="right"><b>
+                <asp:Literal ID="Literal_DevredenKasa" runat="server"></asp:Literal></b></th>
+
+        </tr>
+	</table>
+    <br /><br />
+    <table class="table " style="width: 100%;">
+        <tr>
+            <td style="width: 30%; vertical-align: top;">
+                <table class="table table-bordered" style="width: 100%;">
+			        <tr>
+				        <th colspan="4">Nakit Kasa</th>
+			        </tr>
+                    <asp:Literal ID="Literal_Nakitler" runat="server"></asp:Literal>
+                    <tr>
+                        <th colspan="3" class="right">Toplam</th>
+                        <th class="right">
+                            <asp:Literal ID="Literal_NakitToplam" runat="server"></asp:Literal></th>
+                    </tr>
+                    <tr>
+                        <th colspan="3" class="right">Fark</th>
+                        <th class="right">
+                            <asp:Literal ID="Literal_NakitFark" runat="server"></asp:Literal></th>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 70%; vertical-align: top;">
+                <table class="table table-bordered" style="width: 100%;">
+                    <tr>
+                        <th style="width: 33%">İdari İşler</th>
+                        <th style="width: 33%">Tesis Müdürü</th>
+                        <th style="width: 34%">Onay</th>
+                    </tr>
+                    <tr>
+                        <td style="width: 33%; text-align: center;"><br /><asp:Literal ID="Literal4" runat="server"></asp:Literal><br /><br /><br /><br /><br /><br /><br /><br /></td>
+                        <td style="width: 33%; text-align: center;"><br /><asp:Literal ID="Literal3" runat="server"></asp:Literal><br /><br /><br /><br /><br /><br /><br /><br /></td>
+                        <td style="width: 34%"><br />&nbsp;<br /><br /><br /><br /><br /><br /><br /><br /></td>
+                    </tr>
+
+                </table>
+            </td>
+            
+        </tr>
+    </table>
+
+</body>
+</html>
