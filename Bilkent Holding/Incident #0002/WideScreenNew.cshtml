@@ -1,0 +1,219 @@
+﻿@model CodeFirst.Domain.Model.Page
+@using CodeFirst.UI.BreadCrumb
+@{
+    ViewBag.Title = "PressRoom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string lang = "tr";
+    if (ViewContext.RouteData.Values["lang"] != null)
+    {
+        lang = ViewContext.RouteData.Values["lang"].ToString();
+    }
+}
+
+<!--Banner-->
+@Html.Action("PageBanner", "Modules", new { value = Model.PageBanner })
+<!--/Banner-->
+<!--breadcrumb-->
+@Html.PageBreadCrumb(Model, lang)
+<!--/breadcrumb-->
+<!--Page-->
+<div class="pageContent">
+    <div class="container">
+        <!--FullPage-->
+        <div class="col-full">
+            <!--içerik-->
+            <div class="allContent">
+                <!--h1-->
+                <div class="PageTitle">Bilkent Holding <br><h1>@Model.Title</h1></div>
+                <!--/h1-->
+		@Html.Raw(Model.Content)
+
+                <!--List-->
+                @if (Model.Galleries.Any())
+                {
+                    foreach (var item in Model.Galleries)
+                    {
+                        <div class="listRow">
+                            <h3>@item.GalleryName</h3>
+                            <ul class="fourColums">
+                                  @if (Model.Id == 40 && lang == "en")
+                                {
+								
+								 <li style="min-height: 463px;">
+                                                <a href="https://bilkentholding.com.tr/faaliyetraporu/2023en/" target="_blank">
+                                                    <span class="Image"><img src="https://bilkentholding.com.tr/2024kapak.jpg" alt="" height="176" width="308" style="width:310px;height:420px;"></span>
+
+													<span class="NewsBody">
+                                                        <h2>2023 Annual Report</h2>
+                                                    </span>
+                                                </a>
+                                            </li>
+								 
+								 
+								 <li style="min-height: 463px;">
+                                                <a href="https://bilkentholding.com.tr/faaliyetraporu/e2022/" target="_blank">
+                                                    <span class="Image"><img src="https://bilkentholding.com.tr/faaliyetraporu/e2022/annual2022.jpg" alt="" height="176" width="308" style="width:310px;height:420px;"></span>
+
+													<span class="NewsBody">
+                                                        <h2>2022 Annual Report</h2>
+                                                    </span>
+                                                </a>
+                                            </li>
+											
+											
+								 <li style="min-height: 463px;">
+                                                <a href="https://bilkentholding.com.tr/faaliyetraporu/e2021/" target="_blank">
+                                                    <span class="Image"><img src="https://bilkentholding.com.tr/faaliyetraporu/e2021/enkav.jpg" alt="" height="176" width="308" style="width:310px;height:420px;"></span>
+
+													<span class="NewsBody">
+                                                        <h2>2021 Annual Report</h2>
+                                                    </span>
+                                                </a>
+                                            </li>
+								
+								
+								 <li style="min-height: 516px;">
+                                        <a href='https://bilkentholding.com.tr//files/f/' target="_blank">
+                                            <span class="Image"><img src="https://bilkentholding.com.tr//files/f//kapakgorseli.png" alt="" height="176" width="308" style="width:310px;height:420px;"></span>
+                                            <span class="NewsBody">
+                                                <h2>2020 Annual Report</h2>
+                                            </span>
+                                        </a>
+                                    </li>
+								
+                                    <li style="min-height: 516px;">
+                                        <a href='https://bilkentholding.com.tr/faaliyetraporu/e2019/' target="_blank">
+                                            <span class="Image"><img src="~/UploadFiles/File/asdasf1r32t23dsgfsdvddasd.jpg" alt="" height="176" width="308"></span>
+                                            <span class="NewsBody">
+                                                <h2>2019 Annual Report</h2>
+                                            </span>
+                                        </a>
+                                    </li> 
+                                }else if(Model.Id==40 && lang=="tr"){
+<li style="min-height: 463px;">
+                                                <a href="https://www.bilkentholding.com.tr/UploadFiles/File/2024EntegreRapor.pdf" target="_blank">
+                                                    <span class="Image"><img src="https://www.bilkentholding.com.tr/UploadFiles/File/22074194-b1d2-45c2-a3fd-23e5f11a7345.png" alt="" height="393" width="308" style="width:308px;height:393px;"></span>
+                                                    <span class="NewsBody">
+                                                        <h2>2024 Faaliyet ve Sürdürülebilirlik Raporu</h2>
+                                                    </span>
+                                                </a>
+                                            </li>
+					
+
+								<li style="min-height: 463px;">
+                                                <a href="https://bilkentholding.com.tr/faaliyetraporu/2023/" target="_blank">
+                                                    <span class="Image"><img src="https://www.bilkentholding.com.tr/UploadFiles/File/6d40a22f-c557-49b0-8028-4a17ed42f136.jpg" alt="" height="393" width="308" style="width:308px;height:393px;"></span>
+                                                    <span class="NewsBody">
+                                                        <h2>2023 Faaliyet Raporu</h2>
+                                                    </span>
+                                                </a>
+                                            </li>
+								 
+								  <li style="min-height: 463px;">
+                                                <a href="https://bilkentholding.com.tr/faaliyetraporu/2022/" target="_blank">
+                                                    <span class="Image"><img src="https://www.bilkentholding.com.tr/UploadFiles/File/f722f193-1ad8-44a5-a79c-d6b89f6e32f3.jpg" alt="" height="393" width="308" style="width:308px;height:393px;"></span>
+                                                    <span class="NewsBody">
+                                                        <h2>2022 Faaliyet Raporu</h2>
+                                                    </span>
+                                                </a>
+                                            </li>
+											
+											 <li style="min-height: 463px;">
+                                                <a href="https://bilkentholding.com.tr/faaliyetraporu/2021/" target="_blank">
+                                                    <span class="Image"><img src="https://bilkentholding.com.tr/faaliyetraporu/2021/kapak_k.png" alt="" height="393" width="308" style="width:308px;height:393px;"></span>
+                                                    <span class="NewsBody">
+                                                        <h2>2021 Faaliyet Raporu</h2>
+                                                    </span>
+                                                </a>
+                                            </li>
+											
+											 <li style="min-height: 463px;">
+                                                <a href="http://www.bilkentholding.com.tr/Content/e-katalog/2020/" target="_blank">
+                                                    <span class="Image"><img src="/UploadFiles/File/47a0f3f8-9ddc-4181-a589-823c315693c7.jpg" alt="" height="393" width="308" style="width:308px;height:393px;"></span>
+                                                    <span class="NewsBody">
+                                                        <h2>2020 Faaliyet Raporu</h2>
+                                                    </span>
+                                                </a>
+                                            </li>
+											
+											
+		                            <li style="min-height: 463px;">
+                                                <a href="http://www.bilkentholding.com.tr/Content/e-katalog/2019-1/" target="_blank">
+                                                    <span class="Image"><img src="/UploadFiles/File/3c7d9da0-f8b7-4bf5-80c5-bf5842b35d14.jpg" alt="" height="176" width="308"></span>
+                                                    <span class="NewsBody">
+                                                        <h2>2019 Faaliyet Raporu</h2>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li style="min-height: 463px;">
+                                                <a href="http://www.bilkentholding.com.tr/Content/e-katalog/2018-1/" target="_blank">
+                                                    <span class="Image"><img src="/UploadFiles/File/d887585d-c804-4159-b502-0fff8dd647bd.jpg" alt="" height="176" width="308"></span>
+                                                    <span class="NewsBody">
+                                                        <h2>2018 Faaliyet Raporu</h2>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            
+                                            <li style="min-height: 440px;">
+                                                <a href="http://www.bilkentholding.com.tr/Content/e-katalog/2017/index.html" target="_blank">
+                                                    <span class="Image"><img src="/UploadFiles/File/bf47e4bf-1b59-46d1-a1bb-558a4b2d5a11.jpg" alt="" height="176" width="308"></span>
+                                                    <span class="NewsBody">
+                                                        <h2>2017 Faaliyet Raporu</h2>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li style="min-height: 440px;">
+                                                <a href="http://www.bilkentholding.com.tr/Content/e-katalog/2014/index.html" target="_blank">
+                                                    <span class="Image"><img src="/UploadFiles/File/1e25e08f-02e0-4dde-baea-35c9a7118fe8.jpg" alt="" height="176" width="308"></span>
+                                                    <span class="NewsBody">
+                                                        <h2>2014 Faaliyet Raporu</h2>
+                                                    </span>
+                                                </a>
+                                            </li> 
+				}
+                                else
+                                {
+                                    foreach (var f in item.Files.OrderBy(x => x.Order))
+                                    {
+                                        if (f.Type == 3)
+                                        {
+                                            string url = "/UploadFiles/File/" + f.Path;
+                                            <li style="min-height: 516px;">
+                                                <a href="@(string.IsNullOrEmpty(f.FileUrl) ? url : f.FileUrl)" target="_blank">
+                                                    <span class="Image"><img src="~/UploadFiles/File/@f.FileImage" alt="" height="176" width="308"></span>
+                                                    <span class="NewsBody">
+                                                        <h2>@f.Title</h2>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        }
+                                        else if (f.Type == 2)
+                                        {
+
+                                        }
+                                        else if (f.Type == 1)
+                                        {
+                                            <li>
+                                                <a href="~/UploadFiles/File/@f.Path" data-fancybox="gallery" data-caption="RETİNAR PTR Çevre Gözetleme Radarı" tabindex="0">
+                                                    <span class="Image"><img class="lazy" src="~/UploadFiles/File/@f.Path" alt="" height="140" width="210"></span>
+                                                </a>
+                                            </li>
+                                        }
+
+                                    }
+                                }
+
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                    }
+
+                }
+            </div>
+            <!--/içerik-->
+        </div>
+        <!--FullPage-->
+        <div class="clear"></div>
+    </div>
+</div>
+<!--/Page-->
