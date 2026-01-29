@@ -9,4 +9,4 @@ Buna karşılık sunucu üzerinden araştırmalar yapılmış olup Faaliyet Rapo
 Bu cshtml içinde bir li elementi açılarak ilgili yüklenecek dosyaların path'ı li elementi içinde verilmelidir. 
 
 
-Ilker Kubilay KARABIYIK
+İlker Kubilay KARABIYIK
